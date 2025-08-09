@@ -41,7 +41,7 @@ names: ['drone']
 
 ```
 
-Images were resized to **960×960 pixels** with letterboxing to preserve aspect ratios. Data augmentation included mosaic augmentation, random scaling, and HSV color jitter to improve generalization.
+Images were resized to **640×640 pixels** with letterboxing to preserve aspect ratios. Data augmentation included mosaic augmentation, random scaling, and HSV color jitter to improve generalization.
 
 <br>
 
@@ -51,15 +51,15 @@ Training was conducted on Google Colab Pro+ with **Torch 2.6.0+cu124** and NVIDI
 
 Command:
 
-```bash
-!yolo train \
-    model=yolov11x.pt \
-    data=/content/data.yaml \
-    imgsz=960 \
-    epochs=32 \
-    batch=16 \
-    device=0
-
+```python
+results = model.train(
+        batch=16,
+        data="data.yaml",
+        epochs=32,
+        imgsz=640,
+        lr0=0.001,
+        optimizer='AdamW'
+    )
 ```
 
 **Parameter breakdown:**
@@ -68,13 +68,15 @@ Command:
     
 -   `data`: Path to dataset configuration.
     
--   `imgsz=960`: Higher resolution for better small-object detection.
+-   `imgsz=640`: Higher resolution for better small-object detection.
     
 -   `epochs=32`: Training cycles.
     
 -   `batch=16`: Images per batch.
     
 -   `device=0`: GPU device index.
+-   `lr0=0.001`: Learing rate.
+-   `optimizer='AdamW'` defined training optimization algorithm.
     
 
 **Training Summary:**
@@ -218,3 +220,4 @@ In addition to this work, I have also developed a drone detection model using YO
 -   Khanam, R., & Hussain, M. _YOLOv11: An Overview of the Key Architectural Enhancements_, 2024.
     
 -   [Ultralytics YOLOv11 Documentation](https://docs.ultralytics.com/models/yolo11/)
+
