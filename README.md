@@ -204,20 +204,18 @@ We present comprehensive results of our drone detection model's performance on b
     
 <br>
 
+### Drone Detection with YOLOv11x
 
-### Drone Detection with YOLOv8x and YOLOv7
+In addition to this work, I have also developed drone detection models using YOLOv8x and YOLOv7.
 
-In addition to this work, I have also developed a drone detection model using YOLOv8x and YOLOv7.   
+- You can find the YOLOv8x project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv8x).
 
- - You can find that project or repository of YOLOv8x [here](https://github.com/doguilmak/Drone-Detection-YOLOv8x). 
-
- - You can find that project or repository of YOLOv7 [here](https://github.com/doguilmak/Drone-Detection-YOLOv7).
+- You can find the YOLOv7 project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv7).
 
 <br>
 
 ## **8. References**
 
--   Khanam, R., & Hussain, M. _YOLOv11: An Overview of the Key Architectural Enhancements_, 2024.
+Khanam, R., & Hussain, M. _YOLOv11: An Overview of the Key Architectural Enhancements_, 2024.
     
--   [Ultralytics YOLOv11 Documentation](https://docs.ultralytics.com/models/yolo11/)
-
+[Ultralytics YOLOv11 Documentation](https://docs.ultralytics.com/models/yolo11/)
