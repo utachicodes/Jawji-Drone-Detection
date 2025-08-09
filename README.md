@@ -10,6 +10,8 @@
 
 Unmanned aerial vehicles (UAVs), commonly known as drones, are increasingly used in sectors ranging from surveillance and delivery to agriculture. While offering significant benefits, their proliferation also raises concerns about security, privacy, and airspace safety. This project presents a robust, real-time drone detection and tracking system based on **YOLOv11x**, the latest iteration of the YOLO (You Only Look Once) object detection family. Leveraging architectural innovations like **C3k2 blocks**, **SPPF**, and **C2PSA spatial attention**, the model excels at detecting small, fast-moving aerial targets in diverse and complex environments.
 
+<br>
+
 ## **1. Introduction**
 
 Drone detection poses unique challenges due to factors like small object size, rapid motion, and varying visual appearances under different environmental conditions. YOLO, introduced in 2015 by Redmon et al., revolutionized object detection by enabling single-pass, real-time inference. YOLOv11x, unveiled at YOLO Vision 2024, builds on this legacy with enhanced feature extraction, efficient backbone-neck design, and advanced attention mechanisms.
@@ -208,3 +210,4 @@ In addition to this work, I have also developed a drone detection model using YO
 -   [Ultralytics YOLOv11 Documentation](https://docs.ultralytics.com/models/yolo11/)
 
     
+
