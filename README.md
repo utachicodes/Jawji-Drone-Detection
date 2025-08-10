@@ -213,6 +213,3 @@ In addition to this work, I have also developed drone detection models using YOL
 - You can find the YOLOv8x project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv8x).
 
 - You can find the YOLOv7 project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv7).
-
-<br>
-
