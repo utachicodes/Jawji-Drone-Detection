@@ -10,6 +10,18 @@
 
 Unmanned aerial vehicles (UAVs), commonly known as drones, are increasingly used in sectors ranging from surveillance and delivery to agriculture. While offering significant benefits, their proliferation also raises concerns about security, privacy, and airspace safety. This project presents a robust, real-time drone detection and tracking system based on **YOLOv11x**, the latest iteration of the YOLO (You Only Look Once) object detection family. Leveraging architectural innovations like **C3k2 blocks**, **SPPF**, and **C2PSA spatial attention**, the model excels at detecting small, fast-moving aerial targets in diverse and complex environments.
 
+### **Requirements**
+
+-   Python 3.8+
+    
+-   PyTorch 2.6.0+cu124
+    
+-   OpenCV
+    
+-   Ultralytics YOLOv11
+    
+-   CUDA-compatible GPU
+
 <br>
 
 ## **1. Introduction**
@@ -92,7 +104,31 @@ Results saved to `runs/detect/train`.
 
 <br>
 
-## **4. Inference and Tracking**
+<br>
+
+## **4. Results**
+
+We present comprehensive results of our drone detection model's performance on both the training and testing datasets. The evaluation metrics include precision, recall, and F1-score, which are standard measures to assess the model's detection accuracy. Additionally, we analyze the model's performance across various environmental conditions and discuss its strengths and limitations.
+
+<img  src="https://github.com/doguilmak/Drone-Detection-YOLOv11x/blob/main/assets/results.png" width=1000  height=400 alt="github.com/doguilmak/"/>
+
+**Validation Set Performance (347 images / 369 instances):**
+
+-   **Precision**: 0.922
+    
+-   **Recall**: 0.831
+    
+-   **mAP@50**: 0.905
+    
+-   **mAP@50-95**: 0.546
+    
+**Speed**
+
+The trained YOLOv11x model for drone detection demonstrates impressive processing efficiency across all stages of the detection pipeline. During preprocessing, the model requires only 0.1 milliseconds per image, indicating a highly optimized input handling mechanism that allows for rapid normalization and resizing of images prior to inference. The inference stage, which involves the core computation and prediction processes of the deep neural network, completes in approximately 8.9 milliseconds per image. This reflects the model's capacity to deliver fast object detection results while maintaining the high computational demands of YOLOv11x. Following inference, the postprocessing step, including operations such as non-maximum suppression and bounding box formatting, is completed in just 1.0 millisecond per image.
+
+<br>
+
+## **5. Inference and Tracking**
 
 After training, the YOLOv11x model was used for real-time detection and tracking of drones in video streams. The tracking module integrates YOLO detection outputs with a multi-object tracking (MOT) algorithm, such as ByteTrack or DeepSORT, to maintain object identities across frames, even under partial occlusion or rapid movement. To perform detection and tracking:
 
@@ -125,9 +161,9 @@ result = model.track(
 
 <br>
 
-## **5. Heatmap Visualization**
+## **6. Heatmap Visualization**
 
-To gain insights into drone activity patterns over time and space, heatmap visualization is employed. This method highlights areas with high drone presence frequency, aiding in identifying hotspots or flight corridors. To visualize spatial activity density:
+To derive deeper insights into spatial and temporal patterns of drone activity, heatmap visualization is integrated into the analysis pipeline. This technique effectively aggregates drone detections across video frames, producing a visual representation of the frequency and concentration of drone occurrences in different regions of the frame. Areas with consistently high detection density are rendered with warmer colors, making it easy to identify operational hotspots, typical flight corridors, or zones of repeated drone activity—crucial for surveillance. In the implementation below, the system reads a video stream, tracks drone positions over time using the trained YOLOv11x model, and overlays a heatmap to reflect cumulative activity density:
 
 ```python
 cap = cv2.VideoCapture("/content/pexels-joseph-redfield-8459631 (1080p).mp4")
@@ -146,10 +182,6 @@ heatmap = solutions.Heatmap(
 
 ```
 
--   Heatmaps highlight areas of frequent drone presence.
-    
--   `yolo11n.pt` ensures fast processing for visualization.
-
 <br>
  
 <p align="center">
@@ -160,51 +192,21 @@ heatmap = solutions.Heatmap(
   <em>Drone detection prediction using YOLOv11x. Video footage by Nino Souza, sourced from Pexels.</em>
 </p>
 
+<br>
+
+This visualization not only supports post-hoc analysis of drone flight behavior but also enhances situational awareness in live monitoring systems by revealing zones of concentrated aerial activity.
+ 
+<br>
+
+## **8. References**
+
+Khanam, R., & Hussain, M. _YOLOv11: An Overview of the Key Architectural Enhancements_, 2024.
+    
+[Ultralytics YOLOv11 Documentation](https://docs.ultralytics.com/models/yolo11/)
 
 <br>
 
-## **6. Results**
-
-We present comprehensive results of our drone detection model's performance on both the training and testing datasets. The evaluation metrics include precision, recall, and F1-score, which are standard measures to assess the model's detection accuracy. Additionally, we analyze the model's performance across various environmental conditions and discuss its strengths and limitations.
-
-<img  src="https://github.com/doguilmak/Drone-Detection-YOLOv11x/blob/main/assets/results.png" width=1000  height=400 alt="github.com/doguilmak/"/>
-
-**Validation Set Performance (347 images / 369 instances):**
-
--   **Precision**: 0.922
-    
--   **Recall**: 0.831
-    
--   **mAP@50**: 0.905
-    
--   **mAP@50-95**: 0.546
-    
-
-**Speed:**
-
--   Preprocessing: 0.1 ms/image
-    
--   Inference: 8.9 ms/image
-    
--   Postprocessing: 1.0 ms/image
-    
-<br>
-
-## **7. Requirements**
-
--   Python 3.8+
-    
--   PyTorch 2.6.0+cu124
-    
--   OpenCV
-    
--   Ultralytics YOLOv11
-    
--   CUDA-compatible GPU
-    
-<br>
-
-### Drone Detection with YOLOv11x
+## Drone Detection with YOLOv11x
 
 In addition to this work, I have also developed drone detection models using YOLOv8x and YOLOv7.
 
@@ -213,9 +215,3 @@ In addition to this work, I have also developed drone detection models using YOL
 - You can find the YOLOv7 project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv7).
 
 <br>
-
-## **8. References**
-
-Khanam, R., & Hussain, M. _YOLOv11: An Overview of the Key Architectural Enhancements_, 2024.
-    
-[Ultralytics YOLOv11 Documentation](https://docs.ultralytics.com/models/yolo11/)
