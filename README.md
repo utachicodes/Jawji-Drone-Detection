@@ -198,7 +198,7 @@ This visualization not only supports post-hoc analysis of drone flight behavior 
  
 <br>
 
-## **8. References**
+## **7. References**
 
 Khanam, R., & Hussain, M. _YOLOv11: An Overview of the Key Architectural Enhancements_, 2024.
     
@@ -215,3 +215,4 @@ In addition to this work, I have also developed drone detection models using YOL
 - You can find the YOLOv7 project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv7).
 
 <br>
+
