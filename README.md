@@ -10,6 +10,8 @@
 
 Unmanned aerial vehicles (UAVs), commonly known as drones, are increasingly used in sectors ranging from surveillance and delivery to agriculture. While offering significant benefits, their proliferation also raises concerns about security, privacy, and airspace safety. This project presents a robust, real-time drone detection and tracking system based on **YOLOv11x**, the latest iteration of the YOLO (You Only Look Once) object detection family. Leveraging architectural innovations like **C3k2 blocks**, **SPPF**, and **C2PSA spatial attention**, the model excels at detecting small, fast-moving aerial targets in diverse and complex environments.
 
+The trained weights for this model can be found at the following [HuggingFace repository](https://huggingface.co/doguilmak/Drone-Detection-YOLOv11x/tree/main/weight) 🤗.
+
 ### **Requirements**
 
 -   Python 3.8+
@@ -213,3 +215,4 @@ In addition to this work, I have also developed drone detection models using YOL
 - You can find the YOLOv8x project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv8x).
 
 - You can find the YOLOv7 project or repository [here](https://github.com/doguilmak/Drone-Detection-YOLOv7).
+
