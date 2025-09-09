@@ -1,6 +1,6 @@
 # Drone Detection and Tracking using YOLOv11x
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) ![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white) ![Ultralytics YOLOv11](https://img.shields.io/badge/Ultralytics-YOLOv11-00A6A6) ![PyTorch 2.x](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white) ![OpenCV 4.x](https://img.shields.io/badge/OpenCV-4.x-5C3EE8?logo=opencv&logoColor=white) ![CUDA Optional](https://img.shields.io/badge/CUDA-Optional-76B900?logo=nvidia&logoColor=white) ![Jetson Orin Nano](https://img.shields.io/badge/Jetson-Orin%20Nano-76B900?logo=nvidia&logoColor=white) [![Weights](https://img.shields.io/badge/Weights-HuggingFace-ffcc00?logo=huggingface&logoColor=black)](https://huggingface.co/doguilmak/Drone-Detection-YOLOv11x/tree/main/weight) ![OS](https://img.shields.io/badge/OS-Ubuntu%20%7C%20Windows%2010/11-EB5E28)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) ![Python 3.8+](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white) ![Ultralytics YOLOv11](https://img.shields.io/badge/Ultralytics-YOLOv11-00A6A6) ![PyTorch 2.x](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white) ![OpenCV 4.x](https://img.shields.io/badge/OpenCV-4.x-5C3EE8?logo=opencv&logoColor=white) ![CUDA Optional](https://img.shields.io/badge/CUDA-Optional-76B900?logo=nvidia&logoColor=white) ![Jetson Orin Nano](https://img.shields.io/badge/Jetson-Orin%20Nano-76B900?logo=nvidia&logoColor=white) ![OS](https://img.shields.io/badge/OS-Ubuntu%20%7C%20Windows%2010/11-EB5E28)
 
 
 ## Quickstart
@@ -56,8 +56,7 @@ Outputs:
 
 Unmanned aerial vehicles (UAVs), commonly known as drones, are increasingly used in sectors ranging from surveillance and delivery to agriculture. While offering significant benefits, their proliferation also raises concerns about security, privacy, and airspace safety. This project presents a robust, real-time drone detection and tracking system based on YOLOv11x, the latest iteration of the YOLO (You Only Look Once) object detection family. Leveraging architectural innovations like C3k2 blocks, SPPF, and C2PSA spatial attention, the model excels at detecting small, fast-moving aerial targets in diverse and complex environments.
 
-The trained weights for this model can be found at the following HuggingFace repository:
-- https://huggingface.co/doguilmak/Drone-Detection-YOLOv11x/tree/main/weight
+The trained weights for this model can be found in the repository under jawji.pt.
 
 
 ## Requirements
@@ -183,7 +182,6 @@ Tunables:
 
 ## 7. References
 
-- Khanam, R., & Hussain, M. YOLOv11: An Overview of the Key Architectural Enhancements, 2024.
 - Ultralytics YOLOv11 Documentation: https://docs.ultralytics.com/models/yolo11/
 
 
@@ -194,4 +192,3 @@ Tunables:
 - Outputs: All predictions, tracks, and heatmaps are written to the `runs/` folder by default with a timestamped run name.
 
 
-v7
