@@ -1,0 +1,11 @@
+# Core dependencies for Drone-Detection-YOLOv11x
+ultralytics>=8.2.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Optional: install PyTorch manually to match your CUDA for GPU acceleration.
+# Visit https://pytorch.org/get-started/locally/ for the correct command.
+# Example (CUDA 12.4):
+# pip install --index-url https://download.pytorch.org/whl/cu124 torch torchvision torchaudio
+# Example (CPU only):
+# pip install torch torchvision torchaudio

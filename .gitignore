@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ultralytics outputs
+runs/
+
+# Large weight files
+*.pt
+*.onnx
+*.engine
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
