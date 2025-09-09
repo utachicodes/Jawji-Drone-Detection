@@ -194,8 +194,4 @@ Tunables:
 - Outputs: All predictions, tracks, and heatmaps are written to the `runs/` folder by default with a timestamped run name.
 
 
-## Related Work
-
-This repository complements drone detection projects built with other YOLO variants:
-- YOLOv8x: https://github.com/doguilmak/Drone-Detection-YOLOv8x
-- YOLOv7: https://github.com/doguilmak/Drone-Detection-YOLOv7
+v7
